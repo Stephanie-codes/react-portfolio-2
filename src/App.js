@@ -9,7 +9,7 @@ import Root from './components/Root';
 
 const router = createBrowserRouter( createRoutesFromElements (
   <Route path='/' element={ <Root/> }>
-    <Route path='home' element={ <Home /> } />
+    <Route path='' element={ <Home /> } />
     <Route path='about' element={ <About /> } />
     <Route path='work' element={ <Work /> } />
     <Route path='contact' element={ <Contact /> } />  
