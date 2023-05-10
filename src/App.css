@@ -79,6 +79,14 @@ p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 20px;
+  color: white;
+}
+
+#aboutText {
+  width: 55%;
+  padding-top: 60px;
+  position: absolute;
+  right: 50px;
 }
 
 /* button {
