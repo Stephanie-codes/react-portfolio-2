@@ -14,8 +14,8 @@ export default function Footer() {
 
   return (
     <footer>
-      <button onClick={goBack}>Back</button>
-      <button onClick={goForward}>Forward</button>
+      <button className="backButton" onClick={goBack}>Back</button>
+      <button className="forwardButton" onClick={goForward}>Forward</button>
     </footer>
   );
 }

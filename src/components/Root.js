@@ -6,13 +6,13 @@ import Side from "../components/Side";
 
 export default function Root() {
     return (
-        <>
+        <div className="rootcontainer">
             <Header/>
             <Side/>
             <main>
                 <Outlet/>
             </main>
             <Footer/>
-        </>
+        </div>
     )
 }
