@@ -19,7 +19,7 @@ export default function Home() {
           <img src={javascript} alt="javscript logo" className="javascriptLogo"/>
           <img src={react} alt="react logo" className="reactLogo"/>
         </div>
-        <button>Download CV</button>
+        {/* <button>Download CV</button> */}
       </div>
     </main>
   );
