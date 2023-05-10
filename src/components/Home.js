@@ -8,7 +8,7 @@ import react from "../images/react.svg";
 export default function Home() {
   return (
     <main>
-      <img src={stephpic} alt="photo of Steph" className="stephpic"/>
+      <img src={stephpic} className="stephpic"/>
       <div className='textcontainer'>
         <h1 id="name">Stephanie Burlinchon</h1>
         <h2>Web Developer</h2>
