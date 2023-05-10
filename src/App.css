@@ -89,6 +89,37 @@ p {
   right: 50px;
 }
 
+#mywork {
+  color: white;
+}
+
+#work {
+  width: 55%;
+  padding-top: 60px;
+  position: absolute;
+  right: 50px;
+}
+
+#contactme {
+  color: white;
+}
+
+#contact {
+  width: 55%;
+  padding-top: 60px;
+  position: absolute;
+  right: 50px;
+}
+
+.icons a {
+  padding-right: 20px;
+  color: white;
+  text-decoration: none;
+  text-align: left;
+  transition: background-color 0.2s ease-in-out;
+}
+
+
 /* button {
   padding: 10px 20px;
   background-color: #0077cc;
