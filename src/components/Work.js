@@ -50,12 +50,12 @@ export default function Work() {
 
   return (
   <main id="work">
-  <h1 id="mywork">My work!</h1>
+  <h1 id="mywork">My Work!</h1>
   <div id="workcontainer">
     {projects.map((project, index) => (
       <div key={index} className="project">
+      <h4>{project.name}</h4>
       <img src={project.imageSrc} alt={project.name} />
-      <h2>{project.name}</h2>
       <p>{project.description}</p>
       <div className="button-container">
       <button className="project-button" onClick={() => handleButtonClick(project.link)}>
