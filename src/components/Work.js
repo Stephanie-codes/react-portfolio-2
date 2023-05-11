@@ -57,12 +57,14 @@ export default function Work() {
       <img src={project.imageSrc} alt={project.name} />
       <h2>{project.name}</h2>
       <p>{project.description}</p>
-      <button onClick={() => handleButtonClick(project.link)}>
+      <div className="button-container">
+      <button className="project-button" onClick={() => handleButtonClick(project.link)}>
         View Website
       </button>
-      <button onClick={() => handleButtonClick(project.gitlink)}>
+      <button className="project-button" onClick={() => handleButtonClick(project.gitlink)}>
         View Github
       </button>
+      </div>
       </div>
     ))}
   </div>
