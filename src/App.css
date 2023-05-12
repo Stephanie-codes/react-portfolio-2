@@ -90,11 +90,27 @@ main {
   margin-top: 100px;
 }
 
+@media screen and (max-width: 767px) {
+  #name {
+    font-size: 1.7rem;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
 #text {
   font-size: 2rem;
   font-weight: bold;
   color: white;
   min-height: 2em;
+}
+
+@media screen and (max-width: 767px) {
+  #text {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
 }
 
 h3 {
@@ -104,9 +120,22 @@ h3 {
   color: white;
 }
 
+@media screen and (max-width: 767px) {
+  h3 {
+    font-size: 0.8rem;
+  }
+}
+
 .stack {
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .stack {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .stack img {
@@ -114,6 +143,15 @@ h3 {
   height: 50px;
   margin: 5px;
   padding-left: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .stack img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding-left: 30px;
+  }
 }
 
 h2 {
