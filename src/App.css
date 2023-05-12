@@ -5,8 +5,7 @@ html {
 body {
   background: linear-gradient(90deg, white 25%,#1499b7 25%);
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
+
 }
 
 .header {
@@ -14,34 +13,68 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
-  padding: 10px;
+  padding: 1rem;
 }
 
 .header a {
+  background-color: #1499b7;
   color: #fff;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 1.5rem;
 }
 
 .header a.active {
   font-weight: bolder;
 }
 
+/* Default styles for the main element */
 main {
+  width: 100%;
+  max-width: 1150px;
+  margin: 2rem auto 0; /* Add 4rem of margin to the top */
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+    max-width: none;
+    margin: 0rem auto 0; /* Reduce margin to 2rem on smaller screens */
+    font-size: 1.2em;
+    padding: 1em;
+  }
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  main {
     width: 100%;
     max-width: 1150px;
-    margin: 0 auto;  
+    margin: 0rem auto 0; /* Use the default margin on larger screens */
+    font-size: 1em;
+    padding: 2em;
+  }
 }
 
 .stephpic {
   width: 10rem;
-  height: auto; 
-  border-radius: 5px;
-  object-fit: cover; 
-  margin: 1rem; 
+  height: 10rem;
+  border-radius: 50%;
+  margin: 0.5rem;
   margin-top: 4rem;
   float: left;
-}  
+  overflow: hidden;
+  }
+
+@media (max-width: 768px) {
+  .stephpic {
+    width: 25%;
+    height: 25%;
+    max-width: 100%; 
+    margin-top: 0;
+    background-color: #1499b7;
+  }
+}
 
 .textcontainer {
   display: flex;
@@ -58,7 +91,7 @@ main {
 }
 
 #text {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: bold;
   color: white;
   min-height: 2em;
@@ -104,7 +137,7 @@ p {
   color: white;
 }
 
-#aboutText {
+#about {
   width: 65%;
   padding-top: 60px;
   position: absolute;
@@ -198,15 +231,6 @@ button:hover {
   right: 50px;
 }
 
-.icons a {
-  padding-right: 20px;
-  color: white;
-  text-decoration: none;
-  text-align: left;
-  transition: background-color 0.2s ease-in-out;
-}
-
-
 /* button {
   padding: 10px 20px;
   background-color: #0077cc;
@@ -253,6 +277,13 @@ a:hover {
   transition: background-color 0.2s ease-in-out;
 }
 
+@media screen and (max-width: 767px) {
+  .side a {
+    transform: scale(0.7);
+    margin-top: 20px;
+  }
+}
+
 .side a:hover {
   background-color: #eee;
 }
@@ -266,6 +297,13 @@ a:hover {
   width: 2px;
   height: 31rem;
   background-color: #1499b7;
+}
+
+@media screen and (max-width: 767px) {
+  .side::after {
+    width: 2px;
+    height: 17rem;
+  }
 }
 
 footer {

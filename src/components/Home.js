@@ -10,7 +10,9 @@ import TypingText from "../components/TypingText";
 export default function Home() {
   return (
     <main id="home">
+      <div id='stephpic-container'>
       <img src={stephpic} alt='steph' className="stephpic"/>
+      </div>
       <div className='textcontainer'>
         <h1 id="name">Stephanie Burlinchon</h1>
         {/* <h2 id="title">Web Developer</h2> */}

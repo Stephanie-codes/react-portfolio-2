@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <main id="aboutText">
+    <main id="about">
       <h2>Hi! My name is Stephanie.</h2>
       <h2>Nice to meet you.</h2>
       <br />
