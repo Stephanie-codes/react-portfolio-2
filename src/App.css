@@ -37,7 +37,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2rem solid #30c75a;
   overflow-x: hidden; 
 }
 
