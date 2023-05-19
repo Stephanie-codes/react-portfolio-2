@@ -6,7 +6,7 @@ export default function Contact() {
     <main id="contact">
       <h1 id="contactme">Contact me!</h1>
       <p>
-        E : stephanie.burlinchon@gmail.com 
+        E: stephanie.burlinchon@gmail.com 
       </p>
       <div className="icons">
         <a href="https://www.linkedin.com/in/stephanieburlinchon/" dangerouslySetInnerHTML={{__html: feather.icons.linkedin.toSvg()}} />

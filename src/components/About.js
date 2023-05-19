@@ -4,7 +4,6 @@ export default function About() {
   return (
     <main id="about">
       <h2>Hi! My name is Stephanie Burlinchon.</h2>
-      <h2>Nice to meet you.</h2>
       <br />
       <p>
       A self-taught Web Developer, passionate about building dynamic and engaging web experiences. 
