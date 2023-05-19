@@ -14,8 +14,6 @@ export default function Home() {
       <img src={stephpic} alt='steph' className="stephpic"/>
       </div>
       <div className='textcontainer'>
-        <h1 id="name">Stephanie Burlinchon</h1>
-        {/* <h2 id="title">Web Developer</h2> */}
         <TypingText />
         <div className="stack">
           <h3>Stack</h3>
@@ -25,7 +23,6 @@ export default function Home() {
           <img src={react} alt="react logo" className="reactLogo"/>
           <img src={nodejs} alt="nodejs logo" className="nodejsLogo"/>
         </div>
-        {/* <button>Download CV</button> */}
       </div>
     </main>
   );
