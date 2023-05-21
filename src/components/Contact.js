@@ -85,14 +85,14 @@ export default function Contact() {
   return (
     <main id="contact">
       <h1 id="contactme">Contact me!</h1>
-      <div class="form-container">
-        <form class="contact-form" id="contactform">
-            <div class="row">
-              <div class="boxes"><input type="text" id="fullname" name="name" placeholder="Full Name" /></div>
-              <div class="boxes"><input type="text" id="email" name="email" placeholder="Email" /></div>
-              <div class="boxes"><input type="text" id="subject" name="subject" placeholder="Subject" /></div>
-              <div class="boxes"><textarea id="message" cols="30" rows="10" name="message" placeholder="Message"></textarea></div>
-              <div><input id="submit" type="submit" class="submit" value="Send Message" /></div>
+      <div className="form-container">
+        <form className="contact-form" id="contactform">
+            <div className="row">
+              <div className="boxes"><input type="text" id="fullname" name="name" placeholder="Full Name" /></div>
+              <div className="boxes"><input type="text" id="email" name="email" placeholder="Email" /></div>
+              <div className="boxes"><input type="text" id="subject" name="subject" placeholder="Subject" /></div>
+              <div className="boxes"><textarea id="message" cols="30" rows="10" name="message" placeholder="Message"></textarea></div>
+              <div><input id="submit" type="submit" className="submit" value="Send Message" /></div>
             </div>
         </form>
       </div>
