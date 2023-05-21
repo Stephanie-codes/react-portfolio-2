@@ -17,7 +17,7 @@ export default function Contact() {
       message
     };
 
-    fetch('/', {
+    fetch('/Contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -53,13 +53,57 @@ export default function Contact() {
       <h1 id="contactme">Contact me!</h1>
       <div className="form-container">
         <form className="contact-form" id="contactform" onSubmit={handleSubmit}>
-            <div className="row">
-              <div className="boxes"><input type="text" id="fullname" name="name" placeholder="Full Name" /></div>
-              <div className="boxes"><input type="text" id="email" name="email" placeholder="Email" /></div>
-              <div className="boxes"><input type="text" id="subject" name="subject" placeholder="Subject" /></div>
-              <div className="boxes"><textarea id="message" cols="30" rows="10" name="message" placeholder="Message"></textarea></div>
-              <div><input id="submit" type="submit" className="submit" value="Send Message" /></div>
+          <div className="row">
+            <div className="boxes">
+              <input
+                type="text"
+                id="fullname"
+                name="name"
+                placeholder="Full Name"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+              />
             </div>
+            <div className="boxes">
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="boxes">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
+            </div>
+            <div className="boxes">
+              <textarea
+                id="message"
+                cols="30"
+                rows="10"
+                name="message"
+                placeholder="Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+            </div>
+            <div>
+              <input
+                id="submit"
+                type="submit"
+                className="submit"
+                value="Send Message"
+              />
+            </div>
+          </div>
         </form>
       </div>
       <p>
