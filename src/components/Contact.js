@@ -52,7 +52,7 @@ export default function Contact() {
     <main id="contact">
       <h1 id="contactme">Contact me!</h1>
       <div className="form-container">
-        <form className="contact-form" id="contactform">
+        <form className="contact-form" id="contactform" onSubmit={handleSubmit}>
             <div className="row">
               <div className="boxes"><input type="text" id="fullname" name="name" placeholder="Full Name" /></div>
               <div className="boxes"><input type="text" id="email" name="email" placeholder="Email" /></div>
