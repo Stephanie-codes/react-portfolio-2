@@ -44,8 +44,7 @@ app.post('/', (req, res) => {
       } catch (err) {
         console.log(err);
         res.send('error');
-      }
-      
+      } 
 
   /*  transporter.sendMail(mailOptions, (error, info) => {
         if(error) {
@@ -64,8 +63,6 @@ app.post('/', (req, res) => {
     */
     
 });
-
-
 
 app.listen(PORT, () => {
     console.log(`Server running on Port: ${PORT}`)
