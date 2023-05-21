@@ -200,7 +200,10 @@ main#about {
 
 @media screen and (max-width: 767px) {
   main#about {
-    margin-left: 2rem;
+    margin-top: -1rem;
+    margin-left: 3.5rem;
+    width: 70%;
+    margin-bottom: 1rem;
   }
 }
 

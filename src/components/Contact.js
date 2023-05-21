@@ -1,55 +1,37 @@
-import React, { useEffect } from "react";
+import React from "react";
 import feather from 'feather-icons';
 
 export default function Contact() {
-  useEffect(() => {
-    const contactForm = document.querySelector('.contact-form');
-    const fullName = document.getElementById('fullname');
-    const email = document.getElementById('email');
-    const subject = document.getElementById('subject');
-    const message = document.getElementById('message');
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
 
-      const formInput = {
-        fullName: fullName.value,
-        email: email.value,
-        subject: subject.value,
-        message: message.value
-      }
-
-      fetch('/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formInput)
+    fetch('/', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          throw new Error('Network response was not ok');
+        }
       })
-        .then(response => {
-          if (response.ok) {
-            return response.text();
-          } else {
-            throw new Error('Network response was not ok');
-          }
-        })
-        .then(data => {
-          console.log(data);
-          if (data === 'success') {
-            alert('Email sent');
-            fullName.value = '';
-            email.value = '';
-            subject.value = '';
-            message.value = '';
-          } else {
-            alert('Something went wrong!');
-          }
-        })
-        .catch(error => {
-          console.error('There was an error sending the request:', error);
-        });
-    });
-  }, []); // Empty dependency array to run the effect only once
+      .then(data => {
+        console.log(data);
+        if (data === 'success') {
+          alert('Email sent');
+          form.reset();
+        } else {
+          alert('Something went wrong!');
+        }
+      })
+      .catch(error => {
+        console.error('There was an error sending the request:', error);
+      });
+  };
 
   return (
     <main id="contact">
