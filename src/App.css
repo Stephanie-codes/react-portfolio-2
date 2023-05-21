@@ -4,7 +4,7 @@ html {
 
 @media screen and (max-width: 767px) {
   html {
-    font-size: 12px; /* Adjust the font size as needed for smaller screens */
+    font-size: 12px;
   }
 }
 
@@ -310,7 +310,7 @@ main#contact {
 
 @media (max-width: 768px) {
   .contact-form {
-    transform: scale(0.4); /* Adjust the scale value as needed */
+    transform: scale(0.4);
     margin-top: -12rem;
     margin-bottom: -7rem;
   }
