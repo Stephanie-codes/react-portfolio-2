@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import feather from 'feather-icons';
+import axios from "axios";
 
 export default function Contact() {
   const [fullName, setFullName] = useState('');
@@ -10,42 +11,24 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const formInput = {
-      fullName,
-      email,
-      subject,
-      message
-    };
-
-    fetch('/Contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formInput)
-    })
-      .then(response => {
-        if (response.ok) {
-          return response.text();
-        } else {
-          throw new Error('Network response was not ok');
-        }
+    if (fullName && email && subject && message) {
+      axios.post('http://localhost:8080/Contact', {
+        fullName,
+        email,
+        subject,
+        message,
       })
-      .then(data => {
-        console.log(data);
-        if (data === 'success') {
-          alert('Email sent');
+        .then(() => {
+          alert('Message sent!');
           setFullName('');
           setEmail('');
           setSubject('');
           setMessage('');
-        } else {
-          alert('Something went wrong!');
-        }
-      })
-      .catch(error => {
-        console.error('There was an error sending the request:', error);
-      });
+        })
+        .catch(() => alert('Oops... there is an error!'));
+    } else {
+      alert('Fill in all the fields');
+    }
   };
 
   return (
