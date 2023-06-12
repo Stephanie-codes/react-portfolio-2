@@ -3,6 +3,8 @@ const app = express();
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const PORT = process.env.PORT || 8080;
+const path = require('path');
+
 
 // Middleware
 app.use(cors());
@@ -15,7 +17,7 @@ app.use((req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.post('/Contact', (req, res) => {
